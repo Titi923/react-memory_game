@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Rubik+Dirt&family=Rubik:wght@400;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Special+Elite&display=swap');
 
 /* base style */
 body {
@@ -6,6 +6,6 @@ body {
   margin: 0;
   font-size: 1.5em;
   text-align: center;
-  background: #222;
+  background: #1b1423;
   color: #fff;
 }
