@@ -13,8 +13,12 @@ const cardImages = [
 ]
 
 function App() {
+  // useStates
   const [cards, setCards] = useState([])
   const [turns, setTurns] = useState(0)
+
+  const [choiceOne, setChoiceOne] = useState(null)
+  const [choiceTwo, setChoiceTwo] = useState(null)
   
   // shuffle cards
   const shuffleCards = () => {
@@ -25,6 +29,15 @@ function App() {
     setCards(shuffledCards);
     setTurns(0);
   }
+
+  // handle card choice
+  const handleChoice = (card) => {
+    choiceOne ? setChoiceTwo(card) : setChoiceOne(card);
+
+    if (choiceOne.src === choiceTwo.src) {
+      console.log("It's a match");
+    }
+  }
    
   return (
     <div className="App">
@@ -33,10 +46,14 @@ function App() {
 
       <div className="card-grid">
         {cards.map(card => (
-          <SingleCard key={card.id} cardProp={card} />
+          <SingleCard 
+            key={card.id} 
+            propCard={card} 
+            propHandleChoice={handleChoice}
+          />
         ))}
       </div>
-      
+
     </div>
   );
 }
