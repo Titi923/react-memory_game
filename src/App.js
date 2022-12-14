@@ -33,10 +33,6 @@ function App() {
   // handle card choice
   const handleChoice = (card) => {
     choiceOne ? setChoiceTwo(card) : setChoiceOne(card);
-
-    if (choiceOne.src === choiceTwo.src) {
-      console.log("It's a match");
-    }
   }
    
   return (
