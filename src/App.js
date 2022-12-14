@@ -33,6 +33,8 @@ function App() {
   // handle card choice
   const handleChoice = (card) => {
     choiceOne ? setChoiceTwo(card) : setChoiceOne(card);
+
+    // 
   }
    
   return (
