@@ -1,6 +1,6 @@
 import './SingleCard.css'
 
-export default function SingleCard( {propCard, propHandleChoice} ) {
+export default function SingleCard( {propCard, propHandleChoice, propFlipped} ) {
   
   const handleClick = () => {
     propHandleChoice(propCard)
@@ -8,11 +8,9 @@ export default function SingleCard( {propCard, propHandleChoice} ) {
   
   return (
     <div className='card'>
-      <div>
+      <div className={propFlipped ? "flipped": ""}>
         <img 
-          className='card-front' 
-          src={propCard.src} 
-          alt="card front image" 
+          className='card-front' src={propCard.src} alt="card front image" 
         />
         <img 
           className='card-back' 
