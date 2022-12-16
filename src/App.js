@@ -70,10 +70,15 @@ function App() {
     setDisabled(false);
   };
 
+  // start a new game automatically
+  useEffect(() => {
+    shuffleCards()
+  }, [])
+
   return (
     <div className="App">
-      <h2>Turns: {turns}</h2>
       <h1>Magic Cards Match</h1>
+      <h2>Turns: {turns}</h2>
       <button onClick={shuffleCards}>New Game</button>
 
       <div className="card-grid">
